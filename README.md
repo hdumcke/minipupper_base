@@ -15,7 +15,7 @@ Main changes:
 
 - flash  Ubuntu server 20.04 64bit to SD card
 - boot Raspberry Pi connected to Ethernet
-- ssh ubuntu@lt;raspi ip address&gt; 
+- ssh ubuntu@&lt;raspi ip address&gt; 
 - change password (default is ubuntu)
 - clone this repository with git clone https://github.com/hdumcke/minipupper_base.git
 - ./minipupper_base/install.sh  &lt;my SSID&gt; &lt;my wifi password&gt;
