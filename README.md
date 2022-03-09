@@ -15,10 +15,10 @@ Main changes:
 
 - flash  Ubuntu server 20.04 64bit to SD card
 - boot Raspberry Pi connected to Ethernet
-- ssh ubuntu@<raspi ip address> 
+- ssh ubuntu@<lt;raspi ip address>gt; 
 - change password (default is ubuntu)
 - clone this repository with git clone https://github.com/hdumcke/minipupper_base.git
-- ./minipupper_base/install.sh  <my SSID> <my wifi password>
+- ./minipupper_base/install.sh  <lt;my SSID>gt; <lt;my wifi password>gt;
 - reboot
 - ./minipupper_base/update_kernel_modules.sh
 - reboot
@@ -26,5 +26,10 @@ Main changes:
 
 ## Calibrate
 
-- ssh -Y ubuntu@<raspi WiFi address>
+- ssh -Y ubuntu@<lt;raspi WiFi address>gt;
 - calibrate # this is a command
+
+## To Do
+
+- add documentation
+
