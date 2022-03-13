@@ -13,7 +13,7 @@ make
 make install
 
 sudo cp battery_monitor /usr/bin/
-sudo sed -i "s/BASEDIR/$BASEDIR/" /usr/bin/battery_monitor
+sudo sed -i "s|BASEDIR|$BASEDIR/..|" /usr/bin/battery_monitor
 sudo cp battery_monitor.service /lib/systemd/system/
 sudo systemctl enable  battery_monitor.service
 
