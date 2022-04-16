@@ -55,10 +55,9 @@ sudo sed -i "s|BASEDIR|$BASEDIR|" /etc/rc.local
 sudo sed -i "s|BASEDIR|$BASEDIR|" /usr/bin/battery_monitor
 
 ### Install pip
-cd /tmp
-wget --no-check-certificate https://bootstrap.pypa.io/get-pip.py
-sudo python get-pip.py
+sudo apt install -y python3-pip python3-dev
+sudo -H python3 -m pip install --upgrade pip
 
 ### Install LCD driver
-sudo apt install -y python3-dev
-sudo pip install $BASEDIR/python_module
+sudo git config --global add safe.directory $BASEDIR # temporary fix https://bugs.launchpad.net/devstack/+bug/1968798
+sudo -H python3 -m pip install $BASEDIR/python_module
