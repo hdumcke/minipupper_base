@@ -29,6 +29,7 @@ done
 
 ### Give a meaningfull hostname
 echo "minipupper" | sudo tee /etc/hostname
+echo "127.0.0.1	minipupper" | sudo tee -a /etc/hosts
 
 ### Setup wireless networking ( must change SSID and password )
 if ! grep -q "wifis:" /etc/netplan/50-cloud-init.yaml; then
