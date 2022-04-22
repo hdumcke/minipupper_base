@@ -68,4 +68,5 @@ sudo python get-pip.py
 
 ### Install LCD driver
 sudo apt install -y python3-dev
+sudo git config --global add safe.directory $BASEDIR # temporary fix https://bugs.launchpad.net/devstack/+bug/1968798
 sudo pip install $BASEDIR/python_module
