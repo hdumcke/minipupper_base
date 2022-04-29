@@ -13,7 +13,7 @@ Main changes:
 
 ## Installation
 
-- flash  Ubuntu server 20.04 64bit to SD card
+- flash  Ubuntu server 20.04 64bit to SD card. Ubuntu server 22.04 is also supported
 - boot Raspberry Pi connected to Ethernet
 - ssh ubuntu@&lt;raspi ip address&gt; 
 - change password (default is ubuntu)

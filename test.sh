@@ -35,7 +35,12 @@ mpg123 $BASEDIR/audio/power_on.mp3
 check_result "Did you hear a sound"
 
 ### Test EEPROM driver
-hexdump /sys/bus/nvmem/devices/3-00500/nvmem
+if [ $(lsb_release -cs) == "jammy" ]; then
+    hexdump /sys/bus/nvmem/devices/3-00501/nvmem
+else
+    hexdump /sys/bus/nvmem/devices/3-00500/nvmem
+fi
+
 check_result "Did you see a hex dump"
 
 ### Test servo

@@ -51,6 +51,9 @@ sudo apt update
 sudo apt -y upgrade
 sudo apt install -y i2c-tools dpkg-dev curl python-is-python3 mpg321 python3-tk
 sudo sed -i "s/pulse/alsa/" /etc/libao.conf
+if [ $(lsb_release -cs) == "jammy" ]; then
+    sudo sed -i "s/cards.pcm.front/cards.pcm.default/" /usr/share/alsa/alsa.conf
+fi
 
 ### Install
 for dir in IO_Configuration FuelGauge System EEPROM; do
@@ -69,4 +72,8 @@ sudo python get-pip.py
 ### Install LCD driver
 sudo apt install -y python3-dev
 sudo git config --global --add safe.directory $BASEDIR # temporary fix https://bugs.launchpad.net/devstack/+bug/1968798
+if [ $(lsb_release -cs) == "jammy" ]; then
+    sudo sed -i "s/3-00500/3-00501/" $BASEDIR/python_module/Mangdang/minipupper/Config.py
+    sudo sed -i "s/3-00500/3-00501/" $BASEDIR/python_module/Mangdang/minipupper/calibrate_tool.py
+fi
 sudo pip install $BASEDIR/python_module

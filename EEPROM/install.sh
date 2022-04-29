@@ -2,6 +2,12 @@
 # Install EEPROM driver
 #
 
+if [ $(lsb_release -cs) == "jammy" ]; then
+    cp ubuntu_22.04/* .
+else
+    cp ubuntu_20.04/* .
+fi
+
 set -x
 make
 make install
