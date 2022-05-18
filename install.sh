@@ -75,5 +75,6 @@ sudo git config --global --add safe.directory $BASEDIR # temporary fix https://b
 if [ $(lsb_release -cs) == "jammy" ]; then
     sudo sed -i "s/3-00500/3-00501/" $BASEDIR/python_module/Mangdang/minipupper/Config.py
     sudo sed -i "s/3-00500/3-00501/" $BASEDIR/python_module/Mangdang/minipupper/calibrate_tool.py
+    sudo sed -i "s/3-00500/3-00501/" $BASEDIR/python_module/Mangdang/minipupper/calibrate_servos.py
 fi
 sudo pip install $BASEDIR/python_module
