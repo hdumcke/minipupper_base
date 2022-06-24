@@ -185,5 +185,5 @@ def main():
     print("Calibrated neutral angles:")
     print(hardware_interface.servo_params.neutral_angle_degrees)
 
-
-main()
+if __name__ == "__main__":
+    main()

@@ -1,7 +1,5 @@
 from Mangdang.minipupper.HardwareInterface import HardwareInterface
-from Mangdang.minipupper.Config import PWMParams, ServoParams
 import numpy as np
-import re
 
 
 def get_motor_name(i, j):
@@ -18,12 +16,12 @@ def get_motor_setpoint(i, j):
 
 def degrees_to_radians(input_array):
     """Converts degrees to radians.
-    
+
     Parameters
     ----------
     input_array :  Numpy array or float
         Degrees
-    
+
     Returns
     -------
     Numpy array or float
@@ -64,7 +62,6 @@ def calibrate_angle_offset(hardware_interface):
 
     for leg_index in range(4):
         for axis in range(3):
-            motor_name = get_motor_name(axis, leg_index)
             set_point = get_motor_setpoint(axis, leg_index)
 
             # Zero out the neutral angle
@@ -86,4 +83,5 @@ def main():
     calibrate_angle_offset(hardware_interface)
 
 
-main()
+if __name__ == "__main__":
+    main()
